@@ -8,30 +8,33 @@ from mmorpg_app.repositories.RepositoryManager import RepositoryManager
 
 def main():
     repo = RepositoryManager()
-    print("Creating player: \n ")
-    #player = repo.players.create(username = "lockinchik", email = "mykola_shclyarow2006@gmail.com", password_hash = "hfd123f")
-    #print(f"Player {player.username} created successfully")
+    try:
+        character_id_to_find = 3
 
-    print("\n Getting all players \n")
-    for p in repo.players.get_all():
-        print("-", p.username, "|", p.email)
+        # 1. Отримуємо персонажа через репозиторій
+        character = repo.characters.get_by_id(character_id_to_find)
 
-    print("\n Getting player by id: \n")
-    id = 9
-    player = repo.players.get_by_id(id)
-    print(f"Player with id: {id} found successfully! \n {player}")
+        if not character:
+            print(f"Персонажа з ID {character_id_to_find} не знайдено.")
+            return
 
-    print("\n Updating player: \n")
+        print(f"--- Пошук квестів для персонажа: {character.name} ---")
 
-    player = repo.players.update(id, username = "full4Focus")
-    print(f"Player with id: {id} updated successfully! \n {player}")
+        # 2. Використовуємо вбудований зворотний зв'язок Django.
+        #    Оскільки у моделі CharacterQuest ви не вказали related_name
+        #    для поля 'character', Django автоматично створює
+        #    менеджер 'characterquest_set'.
+        character_quests = character.characterquest_set.all()
 
-    print("\n Deleting player: \n")
-    player = repo.players.delete(id)
-    print(f"Player with id: {id} deleted successfully! \n {player}")
+        if not character_quests.exists():
+            print(f"У {character.name} немає активних квестів.")
+            return
 
-    print("\n List of current players: \n")
-    for p in repo.players.get_all():
-        print("-", p.username, "|", p.email)
+        # 3. Перебираємо і виводимо
+        for cq in character_quests:
+            print(f"  -> Квест: {cq.quest.title} (Статус: {cq.status})")
+
+    except Exception as e:
+        print(f"Сталася помилка: {e}")
 if __name__ == '__main__':
     main()

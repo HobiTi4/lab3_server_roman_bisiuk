@@ -83,7 +83,7 @@ class InventoryItem(models.Model):
     class Meta:
         managed = False
         db_table = 'inventory_item'
-        unique_together = ('inventory', 'item')
+        unique_together = (('inventory', 'item'),)
 
     def __str__(self):
         return f"{self.item.name} x{self.quantity}"
@@ -104,28 +104,30 @@ class Quest(models.Model):
 
 
 class QuestRewardsItem(models.Model):
-    quest = models.ForeignKey('Quest', on_delete=models.CASCADE)
+    quest = models.ForeignKey('Quest', on_delete=models.CASCADE, primary_key=True)
     item = models.ForeignKey('Item', on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
 
     class Meta:
         managed = False
         db_table = 'quest_rewards_item'
-        unique_together = ('quest', 'item')
+        unique_together = (('quest', 'item'),)
 
     def __str__(self):
         return f"{self.item.name} x{self.quantity} (Reward for {self.quest.title})"
 
 
 class CharacterQuest(models.Model):
-    character = models.ForeignKey('Character', on_delete=models.CASCADE)
+    # Кажемо Django використовувати ЦЕ поле як PK
+    character = models.ForeignKey('Character', on_delete=models.CASCADE, primary_key=True)
     quest = models.ForeignKey('Quest', on_delete=models.CASCADE)
     status = models.CharField(max_length=9, blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'character_quest'
-        unique_together = ('character', 'quest')
+        # Синтаксис для 'unique_together' має бути кортежем кортежів
+        unique_together = (('character', 'quest'),)
 
     def __str__(self):
         return f"{self.character.name} - {self.quest.title} ({self.status})"
