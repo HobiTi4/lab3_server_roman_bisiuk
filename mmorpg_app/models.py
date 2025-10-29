@@ -118,7 +118,6 @@ class QuestRewardsItem(models.Model):
 
 
 class CharacterQuest(models.Model):
-    # Кажемо Django використовувати ЦЕ поле як PK
     character = models.ForeignKey('Character', on_delete=models.CASCADE, primary_key=True)
     quest = models.ForeignKey('Quest', on_delete=models.CASCADE)
     status = models.CharField(max_length=9, blank=True, null=True)
@@ -126,7 +125,6 @@ class CharacterQuest(models.Model):
     class Meta:
         managed = False
         db_table = 'character_quest'
-        # Синтаксис для 'unique_together' має бути кортежем кортежів
         unique_together = (('character', 'quest'),)
 
     def __str__(self):
