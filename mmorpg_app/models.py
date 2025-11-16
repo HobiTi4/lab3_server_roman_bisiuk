@@ -83,7 +83,6 @@ class InventoryItem(models.Model):
     class Meta:
         managed = False
         db_table = 'inventory_item'
-        unique_together = (('inventory', 'item'),)
 
     def __str__(self):
         return f"{self.item.name} x{self.quantity}"
@@ -148,4 +147,4 @@ class Marketplace(models.Model):
         return f"{self.item_name()} - {self.price} gold"
 
     def item_name(self):
-        return self.inventory_item.item.name
+        return self.inventory_item.item.namec

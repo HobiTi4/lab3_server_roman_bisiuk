@@ -41,12 +41,12 @@ class QuestSerializer(serializers.ModelSerializer):
         model = Quest
         fields = '__all__'
 
-class QuestRewardsItemSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = QuestRewardsItem
-        fields = '__all__'
-
 class CharacterQuestSerializer(serializers.ModelSerializer):
     class Meta:
         model = CharacterQuest
+        fields = '__all__'
+
+class QuestRewardsItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = QuestRewardsItem
         fields = '__all__'
