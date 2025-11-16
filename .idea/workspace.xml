@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="676f4cc7-750c-41c2-a9d7-d112794a9355" name="Changes" comment="lab3/2 - api update3">
+    <list default="true" id="676f4cc7-750c-41c2-a9d7-d112794a9355" name="Changes" comment="lab3/2 - adding surrogate keys">
+      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_client/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_client/templates/web_client/character_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_client/templates/web_client/character_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_client/templates/web_client/character_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_client/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmorpg_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmorpg_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmorpg_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmorpg_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmorpg_serverlab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmorpg_serverlab/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmorpg_serverlab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmorpg_serverlab/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -50,20 +58,111 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.RepositoryManager.executor&quot;: &quot;Run&quot;,
-    &quot;Python.clean_nulls.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/masar/OneDrive/Desktop/NULP/3 semester/server programming/lab3_repo&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for tests.CharacterTests.executor": "Run",
+    "Python tests.Python tests for tests.CharacterUnitTests.executor": "Run",
+    "Python tests.Python tests in tests.py.executor": "Run",
+    "Python.RepositoryManager.executor": "Run",
+    "Python.Run Django Tests.executor": "Run",
+    "Python.clean_nulls.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/masar/OneDrive/Desktop/NULP/3 semester/server programming/lab3_repo",
+    "settings.editor.selected.configurable": "configurable.group.language"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\masar\OneDrive\Desktop\NULP\3 semester\server programming\lab3_repo\web_client" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for tests.CharacterUnitTests">
+    <configuration name="Run Django Tests" type="PythonConfigurationType" factoryName="Python">
+      <module name="lab3_repo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13 (lab3_repo)" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\masar\OneDrive\Desktop\NULP\3 semester\server programming\lab3_repo" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="test web_client" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration type="tests" factoryName="Autodetect" temporary="true">
+      <module name="lab3_repo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.CharacterTests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.CharacterTests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="lab3_repo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.CharacterTests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.CharacterUnitTests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="lab3_repo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.CharacterUnitTests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Run Django Tests" />
+      <item itemvalue="Python tests.Python tests for tests.CharacterUnitTests" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for tests.CharacterUnitTests" />
+        <item itemvalue="Python tests." />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -127,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763293199771</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="lab3/2 - adding surrogate keys">
+      <option name="closed" value="true" />
+      <created>1763301022846</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763301022847</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -136,6 +243,7 @@
     <MESSAGE value="lab3/2 - api update" />
     <MESSAGE value="lab3/2 - api update2" />
     <MESSAGE value="lab3/2 - api update3" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab3/2 - api update3" />
+    <MESSAGE value="lab3/2 - adding surrogate keys" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab3/2 - adding surrogate keys" />
   </component>
 </project>

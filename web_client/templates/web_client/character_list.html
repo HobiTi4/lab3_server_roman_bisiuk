@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RPG Characters</title>
+</head>
+<body>
+    <h1>All Characters</h1>
+
+    <ul>
+        {% for char in characters %}
+            <li>
+                <a href="{% url 'character_detail' pk=char.character_id %}">
+                    <strong>{{ char.name }}</strong>
+                </a>
+                - Level: {{ char.level }}
+            </li>
+        {% empty %}
+            <li>No characters found in database.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'character_create' %}">
+        <button>+ Add New Character</button>
+    </a>
+<hr>
+</body>
+</html>

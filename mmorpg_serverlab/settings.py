@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'mmorpg_app',
     'rest_framework',
+    'web_client'
 ]
 
 MIDDLEWARE = [

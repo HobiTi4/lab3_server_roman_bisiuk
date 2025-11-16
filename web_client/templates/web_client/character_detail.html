@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ character.name }} Details</title>
+</head>
+<body>
+    <a href="{% url 'character_list' %}">← Back to List</a>
+    <h1>{{ character.name }}</h1>
+    <a href="{% url 'character_edit' character.character_id %}">
+        <button>Edit Character</button>
+    </a>
+    <hr>
+    <p><strong>Level:</strong> {{ character.level }}</p>
+    <p><strong>Class:</strong> {{ character.class_name }}</p>
+    <p><strong>Role:</strong> {{ character.role }}</p>
+    <p><strong>Gold:</strong> {{ character.gold }}</p>
+
+    <p><strong>Guild:</strong>
+        {% if character.guild %}
+            {{ character.guild.name }}
+        {% else %}
+            No Guild
+        {% endif %}
+    </p>
+    <hr>
+
+    <form action="{% url 'character_delete' character.character_id %}" method="post">
+        {% csrf_token %}
+        <button type="submit" style="color: red;">Delete Character</button>
+    </form>
+</body>
+</html>
