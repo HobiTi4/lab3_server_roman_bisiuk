@@ -103,7 +103,8 @@ class Quest(models.Model):
 
 
 class QuestRewardsItem(models.Model):
-    quest = models.ForeignKey('Quest', on_delete=models.CASCADE, primary_key=True)
+    quest_rewards_item_id = models.AutoField(primary_key=True)
+    quest = models.ForeignKey('Quest', on_delete=models.CASCADE)
     item = models.ForeignKey('Item', on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
 
@@ -117,7 +118,8 @@ class QuestRewardsItem(models.Model):
 
 
 class CharacterQuest(models.Model):
-    character = models.ForeignKey('Character', on_delete=models.CASCADE, primary_key=True)
+    character_quest_id = models.AutoField(primary_key=True)
+    character = models.ForeignKey('Character', on_delete=models.CASCADE)
     quest = models.ForeignKey('Quest', on_delete=models.CASCADE)
     status = models.CharField(max_length=9, blank=True, null=True)
 
