@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_title }}</title>
+</head>
+<body>
+    <h1>{{ page_title }}</h1>
+    <p><a href="{% url 'character_list' %}">Back to my site (Characters)</a></p>
+    <hr>
+
+    <table border="1" style="width:100%; border-collapse: collapse; margin-top: 15px;">
+        <thead>
+            <tr>
+                <th>Data (All Fields)</th>
+                <th>Delete Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>
+                    <ul>
+                    {% for key, value in item.items %}
+                        <li><strong>{{ key }}:</strong> {{ value }}</li>
+                    {% endfor %}
+                    </ul>
+                </td>
+
+                <td style="width: 100px; text-align: center;">
+                    <form method="post">
+                        {% csrf_token %}
+                       {% if id_field_name == 'instructor_id' %}
+                        <input type="hidden" name="item_id" value="{{ item.instructor_id }}">
+                            {% elif id_field_name == 'client_id' %}
+                        <input type="hidden" name="item_id" value="{{ item.client_id }}">
+                            {% else %}
+                        <input type="hidden" name="item_id" value="{{ item.id }}">
+                            {% endif %}
+                        <button type="submit" style="color: red;" onclick="return confirm('Delete this from friend\'s DB?');">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    No data received from API.<br>
+                    (Is the server at http://127.0.0.1:8001 running?)
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -60,3 +60,23 @@ class CharacterUnitTests(TestCase):
         response = self.client.post(reverse('character_delete', args=[1]))
         fake_char.delete.assert_called_once()
         self.assertEqual(response.status_code, 302)
+
+@patch('web_client.views.helper')
+class ExternalAPITests(TestCase):
+
+    def test_external_list_view_calls_helper(self, mock_helper):
+        fake_data = [{'client_id': 1, 'name': 'Mocked Client'}]
+        mock_helper.get_list.return_value = fake_data
+
+        response = self.client.get(reverse('external_clients_list'))
+
+        self.assertEqual(response.status_code, 200)
+        mock_helper.get_list.assert_called_once_with('clients')
+        self.assertContains(response, 'Mocked Client')
+
+    def test_external_delete_view_calls_helper(self, mock_helper):
+        mock_helper.delete_item.return_value = True
+        response = self.client.post(reverse('external_clients_list'), {'item_id': '1'})
+
+        mock_helper.delete_item.assert_called_once_with('clients', '1')
+        self.assertRedirects(response, reverse('external_clients_list'))

@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="676f4cc7-750c-41c2-a9d7-d112794a9355" name="Changes" comment="lab3/2 - adding surrogate keys">
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_client/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_client/templates/web_client/character_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_client/templates/web_client/character_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_client/templates/web_client/character_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_client/urls.py" afterDir="false" />
+    <list default="true" id="676f4cc7-750c-41c2-a9d7-d112794a9355" name="Changes" comment="lab3/3 - update1">
+      <change afterPath="$PROJECT_DIR$/web_client/NetworkHelper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_client/templates/web_client/external_list_template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmorpg_serverlab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmorpg_serverlab/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmorpg_serverlab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmorpg_serverlab/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_client/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_client/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_client/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_client/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_client/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_client/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,32 +54,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python tests.Python tests for tests.CharacterTests.executor": "Run",
-    "Python tests.Python tests for tests.CharacterUnitTests.executor": "Run",
-    "Python tests.Python tests in tests.py.executor": "Run",
-    "Python.RepositoryManager.executor": "Run",
-    "Python.Run Django Tests.executor": "Run",
-    "Python.clean_nulls.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/masar/OneDrive/Desktop/NULP/3 semester/server programming/lab3_repo",
-    "settings.editor.selected.configurable": "configurable.group.language"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for tests.CharacterTests.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.CharacterUnitTests.ExternalAPITests.test_external_delete_view_calls_helper.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.CharacterUnitTests.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.ExternalAPITests.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.ExternalAPITests.test_external_delete_view_calls_helper.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.ExternalAPITests.test_external_list_view_calls_helper.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in tests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RepositoryManager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Run Django Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Python.clean_nulls.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/masar/OneDrive/Desktop/NULP/3 semester/server programming/lab3_repo&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.language&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\masar\OneDrive\Desktop\NULP\3 semester\server programming\lab3_repo\web_client" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for tests.CharacterUnitTests">
+  <component name="RunManager" selected="Python tests.Python tests for tests.ExternalAPITests">
     <configuration name="Run Django Tests" type="PythonConfigurationType" factoryName="Python">
       <module name="lab3_repo" />
       <option name="ENV_FILES" value="" />
@@ -107,36 +107,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration type="tests" factoryName="Autodetect" temporary="true">
-      <module name="lab3_repo" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_client" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.CharacterTests&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for tests.CharacterTests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="lab3_repo" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_client" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;tests.CharacterTests&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for tests.CharacterUnitTests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="lab3_repo" />
       <option name="ENV_FILES" value="" />
@@ -152,14 +122,81 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for tests.CharacterUnitTests.ExternalAPITests.test_external_delete_view_calls_helper" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="lab3_repo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.CharacterUnitTests.ExternalAPITests.test_external_delete_view_calls_helper&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.ExternalAPITests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="lab3_repo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.ExternalAPITests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.ExternalAPITests.test_external_delete_view_calls_helper" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="lab3_repo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.ExternalAPITests.test_external_delete_view_calls_helper&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.ExternalAPITests.test_external_list_view_calls_helper" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="lab3_repo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.ExternalAPITests.test_external_list_view_calls_helper&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Run Django Tests" />
+      <item itemvalue="Python tests.Python tests for tests.CharacterUnitTests.ExternalAPITests.test_external_delete_view_calls_helper" />
       <item itemvalue="Python tests.Python tests for tests.CharacterUnitTests" />
+      <item itemvalue="Python tests.Python tests for tests.ExternalAPITests" />
+      <item itemvalue="Python tests.Python tests for tests.ExternalAPITests.test_external_delete_view_calls_helper" />
+      <item itemvalue="Python tests.Python tests for tests.ExternalAPITests.test_external_list_view_calls_helper" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for tests.ExternalAPITests" />
+        <item itemvalue="Python tests.Python tests for tests.ExternalAPITests.test_external_delete_view_calls_helper" />
+        <item itemvalue="Python tests.Python tests for tests.ExternalAPITests.test_external_list_view_calls_helper" />
+        <item itemvalue="Python tests.Python tests for tests.CharacterUnitTests.ExternalAPITests.test_external_delete_view_calls_helper" />
         <item itemvalue="Python tests.Python tests for tests.CharacterUnitTests" />
-        <item itemvalue="Python tests." />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +271,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763301022847</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="lab3/3 - enchant">
+      <option name="closed" value="true" />
+      <created>1763325764861</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1763325764861</updated>
+    </task>
+    <task id="LOCAL-00009" summary="lab3/3 - update1">
+      <option name="closed" value="true" />
+      <created>1763325810831</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1763325810831</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -244,6 +297,8 @@
     <MESSAGE value="lab3/2 - api update2" />
     <MESSAGE value="lab3/2 - api update3" />
     <MESSAGE value="lab3/2 - adding surrogate keys" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab3/2 - adding surrogate keys" />
+    <MESSAGE value="lab3/3 - enchant" />
+    <MESSAGE value="lab3/3 - update1" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab3/3 - update1" />
   </component>
 </project>
